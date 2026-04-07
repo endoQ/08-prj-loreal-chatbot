@@ -21,7 +21,14 @@ body {
 /* header */
 .site-header {
   text-align: center;
-  padding-top: 50px;
+}
+
+/* logo styling */
+.logo {
+  display: block;
+  margin: 0 auto 0px auto; /* centers + space below */
+  max-width: 250px; /* controls size */
+  height: auto;
 }
 
 .site-title {
@@ -118,6 +125,38 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* —— chat bubbles —— */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* base bubble */
+.msg {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* user (right side) */
+.msg.user {
+  align-self: flex-end;
+  background: #000;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+/* AI (left side) */
+.msg.ai {
+  align-self: flex-start;
+  background: #eaeaea;
+  color: #333;
+  border-bottom-left-radius: 4px;
 }
 
 /* footer */
